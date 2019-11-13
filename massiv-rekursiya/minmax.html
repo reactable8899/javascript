@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>минимум максимум</title>
+  </head>
+  <body>
+  <script type="text/javascript">
+  var arr = [4,2,3,4];
+  var i,minn = arr[0],maxs = arr[0];
+  function minmax(minn,maks){
+  for(i = 0; i < 4; i++){
+  if(arr[i] < arr[0])  maxs = arr[i];
+  if(arr[i] > arr[0])  minn = arr[i];
+  minmax(minn,maks)
+}
+}
+  console.log(minn);
+  console.log(maxs);
+  </script>
+  </body>
+</html>
