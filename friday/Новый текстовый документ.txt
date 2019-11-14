@@ -1,0 +1,11 @@
+1)toString,valueoff
+
+2)you dont know js read the book
+
+3)console.log(sum(1)(2)(3)) //с помощью замыкания создать функции чтобы вывелось 6
+
+4) this , scope,closure
+
+5)подготовить прошлые задания
+
+6)shadowing hosting

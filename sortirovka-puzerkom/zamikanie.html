@@ -6,13 +6,51 @@
   </head>
   <body>
     <script>
-      let sum = 20;
-      function show(test){
-        let sum = 10;
-        console.log(sum);
-      }
-      show();
-console.log(sum);
+
+ //      let sum = 20;
+ //       function show(test){
+ //         let sum = 10;
+ //         console.log(sum);
+ //       }
+ //       show();
+ // console.log(sum);
+
+
+function person() {
+  let name = 'Peter';
+
+  return function displayName() {
+    console.log(name);
+  };
+}
+//let peter = person();
+person()(); // выведет 'Peter'
+
+
+// let a = 'global';
+// function outer() {
+//     let b = 'outer';
+// function inner() {
+//       let c = 'inner'
+//       console.log(c);   // выдаст 'inner'
+//       console.log(b);   // выдаст 'outer'
+//       console.log(a);   // выдаст 'global'
+//     }
+//     console.log(a);     // выдаст 'global'
+//     console.log(b);     // выдаст 'outer'
+//     inner();
+//   }
+// outer();
+// console.log(a);         // выдаст 'global'*/
+//
+// global{
+//   outer{
+//     inner
+//   }
+// }
+
+
+
     </script>
 
   </body>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>sum curry</title>
+  </head>
+  <body>
+    <script>
+  var count = (function() {
+  function count(a) {
+    sum += +a || 0;
+    return count;
+  }
+  count.valueOf = function(){
+    return sum;
+  }
+  count.toString = valueOf;
+  return count;
+}());
+var sum = 0;
+console.log(count(1)(2)(3)()()()());
+
+    </script>
+  </body>
+</html>
