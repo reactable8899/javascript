@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>study</title>
+  </head>
+  <body>
+  <script>
+function student(){
+  var studentInfo = {
+    name: "Olim",
+    spec: "proger",
+    lections:[{predmet:"matematika",bal:5},
+              {predmet:"Programmirovanie",bal:4},
+              {predmet:"English",bal:4}
+             ]
+  }
+  // this.setstudName = function(){
+  //   return studentInfo.name;
+  // }
+  this.getstudName = function(name){
+    return studentInfo.name = name;
+  }
+  // this.setstudSpec = function(){
+  //   return studentInfo.spec;
+  // }
+  this.getstudSpec = function(spec){
+    return studentInfo.spec = spec;
+  }
+  this.lection = function(lections){
+    return studentInfo.lections;
+  }
+  this.srball = function(lections){
+    var a = 0;
+    for(var i = 0 ; i< studentInfo.lections.length;i++)
+    a += studentInfo.lections[i].bal;
+    var c = a / studentInfo.lections.length;
+    return c;
+  }
+}
+var cout = new student();
+// console.log(cout.setstudName());
+console.log(cout.getstudName('Patrick Jane'));
+// console.log(cout.setstudSpec());
+console.log(cout.getstudSpec("Mentalist"));
+console.log(cout.lection());
+console.log(cout.srball());
+  </script>
+  </body>
+</html>
