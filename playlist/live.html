@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+ var i = 0;
+  var player = {
+   spisok:[
+    {
+    name:'Martin Garrix',
+    year:'2017',
+    duration:'3.5'
+  },
+  {
+  name:'David Guetta',
+  year:'2016',
+  duration:'4.5'
+},
+{
+name:'Tiesto',
+year:'2014',
+duration:'5'
+},
+],
+
+    play: function() {
+      console.log(player.spisok[i].name+" "+player.spisok[i].year+" "+player.spisok[i].duration);
+
+    },
+    nextPlay: function(){
+      console.log(player.spisok[i+1].name+" "+player.spisok[i+1].year+" "+player.spisok[i+1].duration)
+      i++
+    },
+    previous: function(){
+      console.log(player.spisok[i-1].name+" "+player.spisok[i-1].year+" "+player.spisok[i-1].duration)
+      i--;
+    },
+    getCurrent: function(){
+        console.log(player.spisok[i].name+" "+player.spisok[i].year+" "+player.spisok[i].duration)
+    }
+
+  }
+var videolist = Object.create(player);
+//player.spisok.push({name:'shabnam',year:'2020',duration:'1'});
+// console.log(player.play());
+// console.log(player.nextPlay());
+// console.log(player.previous());
+// console.log(player.getCurrent());
+// console.log(videolist.getCurrent);
+    </script>
+  </body>
+</html>

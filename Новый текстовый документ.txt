@@ -1,0 +1,4 @@
+//this , scope , closure,hoisting , shadowing
+// (rhs)right - (lhs)left  - how is works
+// ref - you dont know js
+// IIFE

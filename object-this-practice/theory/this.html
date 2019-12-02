@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+    function test() {
+    return this;
+}
+test()
+console.log(this); //return global object
+
+var person = {
+  first: 'John',
+  last: 'Smith',
+  full: function() {
+  console.log(this.first + ' ' + this.last);
+  }
+};
+  person.full(); // logs => 'John Smith'
+
+    </script>
+
+  </body>
+</html>

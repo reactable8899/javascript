@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+
+ //      let sum = 20;
+ //       function show(test){
+ //         let sum = 10;
+ //         console.log(sum);
+ //       }
+ //       show();
+ // console.log(sum);
+
+
+function person() {
+  let name = 'Peter';
+
+  return function displayName() {
+    console.log(name);
+  };
+}
+//let peter = person();
+person()(); // выведет 'Peter'
+
+
+// let a = 'global';
+// function outer() {
+//     let b = 'outer';
+// function inner() {
+//       let c = 'inner'
+//       console.log(c);   // выдаст 'inner'
+//       console.log(b);   // выдаст 'outer'
+//       console.log(a);   // выдаст 'global'
+//     }
+//     console.log(a);     // выдаст 'global'
+//     console.log(b);     // выдаст 'outer'
+//     inner();
+//   }
+// outer();
+// console.log(a);         // выдаст 'global'*/
+//
+// global{
+//   outer{
+//     inner
+//   }
+// }
+
+// function cr(n){
+//   return function(num){
+//     return n + num;
+//   }
+//   console.log(n);
+// }
+// const ch = cr(2);
+// console.log(ch(4));
+
+//  function sum(a){
+//    return function(b){
+//      return a + b;
+//    }
+// }
+//  var result = sum(2);
+//  console.log(result(3));
+
+// function createCo(){
+//   var a = 1;
+//   return{
+//     sayA:function(){
+//       return a++;
+//     }
+//   }
+// };
+// var createCo1 = createCo();
+// var createCo2 = createCo();
+// var a = 4;
+//   console.log(a);
+//
+
+
+    </script>
+
+  </body>
+</html>
