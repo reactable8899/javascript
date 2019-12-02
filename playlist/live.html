@@ -6,7 +6,8 @@
   </head>
   <body>
     <script>
- var i = 0;
+ var i=0;
+ var n=0;
   var player = {
    spisok:[
     {
@@ -28,18 +29,37 @@ duration:'5'
 
     play: function() {
       console.log(player.spisok[i].name+" "+player.spisok[i].year+" "+player.spisok[i].duration);
+      n++;
 
     },
     nextPlay: function(){
-      console.log(player.spisok[i+1].name+" "+player.spisok[i+1].year+" "+player.spisok[i+1].duration)
-      i++
+      i++;
+      if(i < player.spisok.length) {
+      console.log(player.spisok[i].name+" "+player.spisok[i].year+" "+player.spisok[i].duration)
+      }
+      else {
+      i = 0;
+      console.log(player.spisok[i].name+" "+player.spisok[i].year+" "+player.spisok[i].duration)
+      }
     },
     previous: function(){
-      console.log(player.spisok[i-1].name+" "+player.spisok[i-1].year+" "+player.spisok[i-1].duration)
       i--;
+      if(i<0){
+        i=2;
+      console.log(player.spisok[i].name+" "+player.spisok[i].year+" "+player.spisok[i].duration)
+      }
+      else{
+        console.log(player.spisok[i].name+" "+player.spisok[i].year+" "+player.spisok[i].duration)
+      }
+
     },
     getCurrent: function(){
+      if(n==0){
+        console.log("spisok pust");
+      }
+      else{
         console.log(player.spisok[i].name+" "+player.spisok[i].year+" "+player.spisok[i].duration)
+    }
     }
 
   }
