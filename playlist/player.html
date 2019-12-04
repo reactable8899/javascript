@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+//  var i=0;
+//  var n=0;
+//   var player = {
+//    spisok:[
+//     {
+//     name:'Martin Garrix',
+//     year:'2017',
+//     duration:'3.5'
+//   },
+//   {
+//   name:'David Guetta',
+//   year:'2016',
+//   duration:'4.5'
+// },
+// {
+// name:'Tiesto',
+// year:'2014',
+// duration:'5'
+// },
+// ],
+//
+//     play: function() {
+//       console.log(player.spisok[i].name+" "+player.spisok[i].year+" "+player.spisok[i].duration);
+//       n++;
+//
+//     },
+//     nextPlay: function(){
+//       i++;
+//       if(i < player.spisok.length) {
+//       console.log(player.spisok[i].name+" "+player.spisok[i].year+" "+player.spisok[i].duration)
+//       }
+//       else {
+//       i = 0;
+//       console.log(player.spisok[i].name+" "+player.spisok[i].year+" "+player.spisok[i].duration)
+//       }
+//     },
+//     previous: function(){
+//       i--;
+//       if(i<0){
+//         i=2;
+//       console.log(player.spisok[i].name+" "+player.spisok[i].year+" "+player.spisok[i].duration)
+//       }
+//       else{
+//         console.log(player.spisok[i].name+" "+player.spisok[i].year+" "+player.spisok[i].duration)
+//       }
+//
+//     },
+//     getCurrent: function(){
+//       if(n==0){
+//         console.log("spisok pust");
+//       }
+//       else{
+//         console.log(player.spisok[i].name+" "+player.spisok[i].year+" "+player.spisok[i].duration)
+//     }
+//     }
+//
+//   }
+// var videolist = Object.create(player);
+// //player.spisok.push({name:'shabnam',year:'2020',duration:'1'});
+// // console.log(player.play());
+// // console.log(player.nextPlay());
+// // console.log(player.previous());
+// // console.log(player.getCurrent());
+// // console.log(videolist.getCurrent);
+
+var player = {
+  list:[],
+  name:"player",
+  currentItem:0,
+  played:false,
+  next: function(){
+    if(this.played){
+      this.currentItem++;
+    }else{
+      this.currentItem = 0;
+    }
+  },
+  prev: function(){
+    if(this.played&& this.currentItem > 0){
+      this.currentItem--;
+    }else{
+      this.currentItem = this.list.length - 1;
+    }
+  },
+  getCurrent: function(){
+    return this.list[this.currentItem];
+  },
+  play: function(){
+    this.played = true;
+    console.log(this.getCurrent());
+  },
+  addToList: function(listItem){
+    this.list.push(listItem);
+  }
+};
+var videoPlayer = Object.create(Player);
+videoPlayer.uploadToYoutube = function(name){
+  for(var i = 0; i < this.list.length; i++){
+    if(this.list[i].name ===name){
+      console.log("Upload to youtube",this.list[i]);
+      return
+    }
+  }
+  console.log("cannot find file" + name + "to upload to youtube");
+};
+videoPlayer.playFromYoutube = function(item){
+  console.log("playing video from yourube:",item);
+  this.addToList(item);
+};
+videoPlayer.addToList({name:"shashmaqom",year:2000 , duration:"3.2"})
+videoPlayer.uploadToYoutube("shashmaqom");
+console.log("player list:", player.list);
+
+    </script>
+  </body>
+</html>
