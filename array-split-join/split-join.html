@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+    //   function Join(arr){
+    //     var joined = arr.join(",");
+    //     console.log(joined);
+    //   }
+    //   function Split(arr){
+    //   var splited = arr.split(',');
+    //   console.log(splited);
+    //   }
+    // Join(arr = ["Olim","Fedya","Abubakr","Daler"]);
+    // Split(arr = "Olim,Fedya,Abubakr,Daler");
+
+var arr = [1,2,3,45,50];
+  function join(separator){
+    var str = new String();
+    for(var i = 0 ; i < this.length; i++){
+      str += this[i] + separator;
+    }
+    return str;
+  }
+  console.log(arr.join(","));
+
+  function split(separator){
+    var arr = [];
+    for(var i = 0; i<this.length; i++){
+      if(this.charAt(i) = separator){
+        arr.push(this.charAt(i));
+      }
+    }
+    return arr;
+  }
+  str = "Olim 33 44 77";
+  console.log(str.split(" "))
+    </script>
+  </body>
+</html>
