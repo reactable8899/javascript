@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+    //#1
+    // var str = 'abcde';
+    // var a = str[0];
+    // var b = str[1];
+    // var c = str[4];
+    // console.log(a + " " + b + " "+ c)
+
+
+    //#2
+  //   function kolchas(chas){
+  //     var result = chas*3600;
+  //     console.log(result)
+  //   }
+  // kolchas(3);
+
+  //#3
+  // var num = 1;
+  // num += 12;
+  // num -= 14;
+  // num *= 5;
+  // num /= 7;
+  // num +=1;
+  // num -=1;
+  // alert(num);
+
+  //#4
+// var a = 3;
+// switch (a) {
+//   case 1:
+//   alert("zima"); break;
+//   case 2:
+//   alert("vesna");break;
+//   case 3:
+//   alert("osen");break;
+//   case 4:
+//   alert("leto");break;
+//   default:
+//
+// }
+
+  //#5
+//   var month = 9;
+//   if(month == 12 || month == 1 || month ==2){
+//   console.log("zima");
+// }
+// else if(month ==3 || month ==4 || month ==5){
+// console.log("vesna");
+// }
+// else if(month == 6 ||month ==7 || month ==8){
+// console.log("leto");
+// }
+// else if(month ==9 || month ==10 || month ==11){
+// console.log("osen");
+// }
+
+//#6
+  // var str = 'abcde';
+  // if(str[0] == 'a'){
+  //   alert("da!")
+  // }
+  // else alert("net!")
+//#7
+// var arr = [1,2,3,3,2,1];
+// var a = 0,b = 0;
+// for(let i = 0;i<3 ; i++)
+// a += arr[i];
+// for(let i = 3;i<6 ; i++)
+// b += arr[i];
+// if(a==b)
+// alert("da")
+// else alert("net")
+
+//Задачи на циклы
+//#1
+// var arr = [2,5,9,15,0,4];
+// for(let i = 0; i< arr.length; i++){
+//   if(arr[i] > 3 && arr[i] < 10)
+//   console.log(arr[i]);
+// }
+//#2
+// var arr = [1,2,5,9,4,13,4,10];
+// for(let i = 0; i < arr.length; i++){
+//   if(arr[i] == 4){
+//   alert("Есть!");
+//   break;
+// }
+// }
+//#3
+// var arr = ["понедельник","вторник","cреда","четверг","пятница","суббота","воскресенье"];
+// var vih;
+// for(let i = 0 ; i < 5; i++){
+//   document.write(arr[i] + " ")
+// }
+// for(let i = 5 ; i < 7; i++){
+// document.write("<b>" + arr[i] + " " +"</b>")
+// }
+
+//Задачи на функции работы со строками
+//#1
+
+
+//#2
+// var str = 'Я учу javascript';
+// var r = str.length;
+// console.log(r);
+
+//#4
+// function split(){
+// var names = "Я учу javascript";
+// var arr = names.split(' ');
+// console.log(arr);
+// }
+// split();
+//#5
+//  function join(){
+// var arr = ["Я","учу","javascript","!"];
+//  var arr2 = arr.join('+');
+//  console.log(arr2);
+// }
+// join();
+
+//Задачи функции работы с массивами
+//#1
+// var arr = [1,2,3];
+// var arr2 = [4,5,6];
+// var arr3 = arr.concat(arr2);
+// console.log(arr3);
+
+//#2
+// var arr = [1,2,3];
+// arr.reverse();
+// console.log(arr)
+
+//#3
+// var arr = [1,2,3];
+// arr.splice(3,0,4,5,6);
+// console.log(arr);
+
+//#4
+// var arr = [1,2,3];
+// arr.splice(0,0,4,5,6);
+// console.log(arr);
+
+//#5
+// var arr = [1,2,3,4,5];
+// var arr1 = arr.slice(0,3);
+// console.log(arr1);
+
+//#6
+// var arr = [3,4,1,2,7];
+// arr.sort(function(a, b){return a - b});
+// console.log(arr);
+
+//практика комбинаций стандартных функций
+//#1
+// function reverse (str) {
+//   var ea = str.split('');
+//       ea.reverse();
+//   return ea.join('');
+// }
+//
+// console.log(reverse('123456'));
+
+//#2
+// var str = 'http:/humo.tj';
+// if(str[0] == 'a'){
+//   alert("da!")
+// }
+// else alert("net!")
+
+//Задачи на основы работы с пользовательскими фунцкиями
+//1
+ var arr = ["понедельник","вторник","cреда","четверг","пятница","суббота","воскресенье"];
+ function obr(i){
+   console.log(arr[i-1]);
+ }
+ obr(4);
+
+
+
+//приемы работы с логическими значениями
+//2
+// function proverka(i){
+//   if(i > 0){
+//   console.log("false")
+// }else if(i < 0)
+// console.log("true");
+// }
+// proverka(-1);
+
+    </script>
+  </body>
+</html>

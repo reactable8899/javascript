@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+ async function f(src, src2, src3) {
+
+  var img = document.createElement('img');
+  var img2 = document.createElement('img');
+  var img3 = document.createElement('img');
+
+  var getSrc = new Promise(function(resolve, reject){
+      setTimeout(function () {
+          img.src = src;
+              resolve(img);
+              reject(new Error("error on " + src));
+          document.body.prepend(img)
+      }, 1003);
+  });
+
+  var wait = await getSrc;
+  document.body.prepend(wait);
+
+
+
+  var getSrc2 = new Promise(function(resolve, reject){
+      setTimeout(function () {
+          img2.src = src2;
+        resolve(img2);
+          reject(new Error("error on " + src));
+
+      }, 1002);
+  });
+  var wait2 = await getSrc2;
+  document.body.prepend(wait2);
+
+
+
+  var getSrc3 = new Promise(function(resolve, reject){
+      setTimeout(function () {
+          img3.src = src3;
+          resolve(img3);
+          reject(new Error("error on " + src));
+
+      }, 1001);
+  });
+  var wait3 = await getSrc3;
+  document.body.prepend(wait3);
+
+}
+
+f("./img/1.jpg", "./img/2.jpg", "./img/3.jpg");
+
+    </script>
+  </body>
+</html>
